@@ -1,0 +1,189 @@
+const net = require('net');
+const HOST = '192.168.0.102';
+const PORT = 5000;
+
+const clients = [];
+const MAX_CLIENTS = 4;
+
+const server = net.createServer(socket => {
+  if (clients.length >= MAX_CLIENTS) {
+    socket.write("Server full, please wait...\n");
+    socket.end();
+    return;
+  }
+  clients.push(socket);
+  console.log("Client connected:", socket.remoteAddress);
+});
+[192.168.0.102] hello
+[192.168.0.102] hi
+[192.168.0.102] i hope this works
+[192.168.0.102] Time
+[192.168.0.102] Date
+[192.168.0.102] PING
+[192.168.0.102] /time
+[192.168.0.102] time
+[192.168.0.102] /date
+[192.168.0.102] /ping
+[192.168.0.102] /name
+[192.168.0.102] ?
+[192.168.0.102] exitxit
+[192.168.0.102] /ping
+[192.168.0.102] hi
+[192.168.0.102] /time
+[192.168.0.102] /date
+[192.168.0.102] /list
+[192.168.0.102] ??
+[192.168.0.102] bro respond??
+[192.168.0.102] hello
+[192.168.0.102] /time
+[192.168.0.102] /ping
+[192.168.0.102] /date
+[192.168.0.102] /name
+[192.168.0.102] /help
+[192.168.0.102] /search text
+[192.168.0.102] /listcast
+[192.168.0.102] /lsit
+[192.168.0.102] /lsitclients
+[192.168.0.102] /listclients
+[192.168.0.102] /brodcast <HELLLO WORLD or something>
+[192.168.0.102] /brodcast<HELLO WORLD or something>
+[192.168.0.102] ?
+[192.168.0.102] /upload
+[192.168.0.102] bye
+[192.168.0.102] /help
+[192.168.0.102] /list
+[192.168.0.102] /read
+[192.168.0.102] /list
+[192.168.0.102] /file
+[192.168.0.102] /help
+[192.168.0.102] /list
+[192.168.0.102] /?
+[192.168.0.102] /help
+[192.168.0.102] wdkwd
+[192.168.0.102] /help
+[192.168.0.102] /help
+[192.168.0.102] ???
+[192.168.0.102] bro
+[192.168.0.102] ?
+[192.168.0.102] /time
+[192.168.0.102] /date
+[192.168.0.102] /help
+[192.168.0.102] blabla
+[192.168.0.102] /help
+[192.168.0.102] noooooooooooo
+[192.168.0.102] this is bull*****
+[192.168.0.102] dnwoqfnoef
+[192.168.0.102] /help
+[192.168.0.102] /ping
+[192.168.0.102] /ping
+[192.168.0.102] /ping
+[192.168.0.102] /ping
+[192.168.0.102] /ping
+[192.168.0.102] /time
+[192.168.0.102] /date
+[192.168.0.102] nfuw
+[192.168.0.102] ok
+[192.168.0.102] /help
+[192.168.0.102] lets gooooooooo
+[192.168.0.102] /help
+[192.168.0.102] upload
+[192.168.0.102] /upload
+[192.168.0.102] /file
+[192.168.0.102] upload
+[192.168.0.102] upload
+[192.168.0.102] /help
+[192.168.0.102] /list
+[192.168.0.102] node
+[192.168.0.102] /list
+[192.168.0.102] dwdwd
+[192.168.0.102] /ping
+[192.168.0.102] /help
+[192.168.0.102] /brodcast <hello>
+[192.168.0.102] /brodcast hello
+[192.168.0.102] /help
+[192.168.0.102] ????
+[192.168.0.102] fi
+[192.168.0.102] /info filename.txt
+[192.168.0.102] /download filename.txt
+[192.168.0.102] /upload filename.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] ?
+[192.168.0.102] j
+[192.168.0.102] /help
+[192.168.0.102] .list
+[192.168.0.102] /list
+[192.168.0.102] /upload filename.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /download filename.txt
+[192.168.0.102] /list
+[192.168.0.102] /info filename.txt
+[192.168.0.102] /time
+[192.168.0.102] /date
+[192.168.0.102] /brodcast
+[192.168.0.102] /help
+[192.168.0.102] /name
+[192.168.0.102] 
+[192.168.0.102] /listclients
+[192.168.0.102] delete filename.txt
+[192.168.0.102] /delete filename.txt
+[192.168.0.102] /exit
+[192.168.0.102] /help
+[192.168.0.102] d
+[192.168.0.102] wbfuqbwinamop,
+[192.168.0.102] ibdnm
+[192.168.0.102] /help
+[192.168.0.102] /ping
+[192.168.0.102] dwd'
+[192.168.0.102] /upload filename.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /download filename.txt
+[192.168.0.102] /info filename.txt
+[192.168.0.102] dsd
+[192.168.0.102] /help
+[192.168.0.102] /upload filename.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /download filename.txt
+[192.168.0.102] /delete filename.txt
+[192.168.0.102] wdw
+[192.168.0.102] /delete filename.txt
+[192.168.0.102] sorry
+[192.168.0.102] w
+[192.168.0.102] hello
+[192.168.0.102] /help
+[192.168.0.102] /time
+[192.168.0.102] /datew
+[192.168.0.102] /date
+[192.168.0.102] /ping
+[192.168.0.102] /ping
+[192.168.0.102] /ping
+[192.168.0.102] /naem
+[192.168.0.102] /naem
+[192.168.0.102] /name
+[192.168.0.102] /upload test1.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /download test2.txt
+[192.168.0.102] /download test1.txt
+[192.168.0.102] d
+[192.168.0.102] /upload test3.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /delete test3.txt
+[192.168.0.102] wdoawfhafjk
+[192.168.0.102] /list
+[192.168.0.102] help
+[192.168.0.102] /help
+[192.168.0.102] /broadcast Hello everyone!
+[192.168.0.102] /broadcast Hello everyone! i Am hERe
+[192.168.0.102] /exit
+[192.168.0.102] kdwkdw
+[192.168.0.102] /help
+[192.168.0.102] /upload test1.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /download test1.txt
+[192.168.0.102] /download test2.txt
+[192.168.0.102] /upload test2.txt aGVsbG8gd29ybGQhPyE=
+[192.168.0.102] /download test2.txt
+[192.168.0.102] /info test2.txt
+[192.168.0.102] /info test.txt
+[192.168.0.102] /info test3.txt
+[192.168.0.102] /info test1.txt
+[192.168.0.102] .help
+[192.168.0.102] /help
+[192.168.0.102] /time
+[192.168.0.102] /date
+[192.168.0.102] /ping
+[192.168.0.102] /search test1.txt
+[192.168.0.102] /search test2.txt
+[192.168.0.102] /search test3.txt

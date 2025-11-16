@@ -1,0 +1,16 @@
+const net = require('net');
+const HOST = '192.168.0.102';
+const PORT = 5000;
+
+const clients = [];
+const MAX_CLIENTS = 4;
+
+const server = net.createServer(socket => {
+  if (clients.length >= MAX_CLIENTS) {
+    socket.write("Server full, please wait...\n");
+    socket.end();
+    return;
+  }
+  clients.push(socket);
+  console.log("Client connected:", socket.remoteAddress);
+});
