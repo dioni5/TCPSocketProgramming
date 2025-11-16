@@ -108,7 +108,7 @@ function handleCommand(socket, message) {
         case '/help':
             socket.write(
 `Available commands:
-----------------------------------------
+------------------------------------------
 /time             Show current server time
 /date             Show current server date
 /name             Show server name
@@ -123,7 +123,7 @@ function handleCommand(socket, message) {
 /info <file>      Show file info
 /exit             Disconnect
 /help             Show this message
-----------------------------------------\n`
+------------------------------------------\n`
             );
             break;
 
@@ -219,3 +219,4 @@ process.stdin.on('data', input => {
         console.log('Stats updated in server_stats.txt');
     }
 });
+
