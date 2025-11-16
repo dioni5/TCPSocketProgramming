@@ -14,6 +14,7 @@ const server = net.createServer(socket => {
   clients.push(socket);
   console.log("Client connected:", socket.remoteAddress);
 });
+
 [192.168.0.102] hello
 [192.168.0.102] hi
 [192.168.0.102] i hope this works
@@ -45,7 +46,7 @@ const server = net.createServer(socket => {
 [192.168.0.102] /lsit
 [192.168.0.102] /lsitclients
 [192.168.0.102] /listclients
-[192.168.0.102] /brodcast <HELLLO WORLD or something>
+[192.168.0.102] /brodcast HELLLO WORLD or something
 [192.168.0.102] /brodcast<HELLO WORLD or something>
 [192.168.0.102] ?
 [192.168.0.102] /upload
@@ -71,8 +72,6 @@ const server = net.createServer(socket => {
 [192.168.0.102] blabla
 [192.168.0.102] /help
 [192.168.0.102] noooooooooooo
-[192.168.0.102] this is bull*****
-[192.168.0.102] dnwoqfnoef
 [192.168.0.102] /help
 [192.168.0.102] /ping
 [192.168.0.102] /ping
